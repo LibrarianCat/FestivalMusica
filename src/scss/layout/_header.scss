@@ -6,21 +6,55 @@
     
     h1 {
         color: v.$blanco;
+        text-align: center;
+        @include m.tablet {
+            margin: 0;
+        }
     }
-    
+    .contenido-header {
+        padding: 2rem;
+        @include m.tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    }
 }
 
 .navegacion-principal {
+    @include m.tablet {
+        display: flex;
+        gap: 2rem;
+    }
+    // @include m.telefono {
+    //     background-color: red;
+    //     text-transform: uppercase;
+    //     font-weight: bold;
+    // }
     a {
+        display: block;
+        text-align: center;
         color: v.$blanco;
         font-size: 2.4rem;
+        margin-bottom: 1rem;
+        @include m.tablet {
+            margin: 0;
+        }
 
+        // @include m.telefono {
+        //     font-size: 8rem;
+        //     color: blue;
+       }
     &:hover {
         color: v.$martin;
     }
     }
-}
 
-.prueba {
 
-}
+// .prueba {
+//     @include m.heading(v.$martin, true);
+// }
+
+// .texto {
+//     @include m.heading;
+// }
